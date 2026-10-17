@@ -36,7 +36,7 @@ The planner chooses which agents run and their order. News is retrieved and rout
 
 1. Open [Multi_agent_system_final.ipynb](Multi_agent_system_final.ipynb) in Google Colab or Jupyter.
 2. Install its dependencies if necessary: `pandas`, `yfinance`, `requests`, and `openai`. The setup cell contains a `%pip install` command you can uncomment.
-3. Supply `OPENAI_API_KEY` and `NEWSAPI` (or `NEWS_API_KEY`) as Colab Secrets or environment variables. Do not place keys in notebook source or committed outputs.
+3. Supply `OPENAI_API_KEY` and `NEWSAPI` as Colab Secrets or environment variables. Do not place keys in notebook source or committed outputs.
 4. Set `TEST_TICKER` and `RESEARCH_QUESTION`, then restart the runtime and run the cells in order. The research cell makes external data requests and paid OpenAI API calls.
 5. Inspect the plan, specialist findings, sources, article-routing table, evaluation history, and any revisions before exporting the notebook to HTML or PDF.
 
@@ -56,10 +56,6 @@ An earlier run on the **original labels** reported **90% accuracy and 0.903 macr
 
 The LLM evaluator's report score is feedback within the workflow, not an independent measure of financial accuracy. Citation checks confirm that referenced evidence IDs exist, but human review is still needed to check whether each claim is supported.
 
-## Development files
-
-- [agentic_financial_system.py](agentic_financial_system.py): source used to build the notebook's agent and evaluation cells.
-- [build_notebook.py](build_notebook.py): regenerates the notebook and an unexecuted HTML preview. It reads the original Week 1–2 notebook from the author's local path, so that path must be adjusted to run the builder on another computer. **You do not need the builder to run the delivered notebook.**
 - [test_agentic_system.py](test_agentic_system.py): development tests for calculations, routing, validation, memory, and revision behavior. From the repository root, run `python3 -m unittest discover -s output/final_project -p 'test_*.py'` after installing `pandas`.
 
 The final submission should include real run outputs, a fresh routing evaluation, limitations, source references, and each team member's actual contributions.
