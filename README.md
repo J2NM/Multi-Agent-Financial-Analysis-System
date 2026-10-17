@@ -6,12 +6,12 @@ The primary deliverable is [Multi_agent_system_final.ipynb](Multi_agent_system_f
 
 ```text
 Ticker + research question
-    → Planner/Coordinator Agent: select tasks and data windows
-    → Yahoo Finance and NewsAPI: retrieve current inputs
-    → News Analysis Agent: classify articles and route relevant facts
-    → Market and Financial/Earnings Agents: calculate and interpret metrics
-    → Specialist self-review → combined research report
-    → Evaluator–Optimizer Agent: score, request targeted revisions, reevaluate
+    - Planner/Coordinator Agent: select tasks and data windows
+    - Yahoo Finance and NewsAPI: retrieve current inputs
+    - News Analysis Agent: classify articles and route relevant facts
+    - Market and Financial/Earnings Agents: calculate and interpret metrics
+    - Specialist self-review -> combined research report
+    - Evaluator–Optimizer Agent: score, request targeted revisions, reevaluate
 ```
 
 The planner chooses which agents run and their order. News is retrieved and routed first when selected so market and earnings articles can inform the corresponding specialists. Python calculates numeric metrics; the LLM interprets them. The evaluator scores accuracy, completeness, evidence, and clarity. The coordinator stops when the report passes, evaluation fails, or two revisions have been attempted.
@@ -34,7 +34,7 @@ The planner chooses which agents run and their order. News is retrieved and rout
 
 ## Run the notebook
 
-1. Open [Multi_agent_system_final_implemented.ipynb](Multi_agent_system_final_implemented.ipynb) in Google Colab or Jupyter.
+1. Open [Multi_agent_system_final.ipynb](Multi_agent_system_final.ipynb) in Google Colab or Jupyter.
 2. Install its dependencies if necessary: `pandas`, `yfinance`, `requests`, and `openai`. The setup cell contains a `%pip install` command you can uncomment.
 3. Supply `OPENAI_API_KEY` and `NEWSAPI` (or `NEWS_API_KEY`) as Colab Secrets or environment variables. Do not place keys in notebook source or committed outputs.
 4. Set `TEST_TICKER` and `RESEARCH_QUESTION`, then restart the runtime and run the cells in order. The research cell makes external data requests and paid OpenAI API calls.
