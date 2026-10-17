@@ -1,6 +1,6 @@
 # Multy-Agent-Financial-Analysis-System
 This project will consist in a system to build a real-world financial analysis system powered by agentic AI. Unlike traditional pipelines, agentic systems can reason, plan, and act, coordinating multiple specialized LLM agents to handle complex financial tasks end-to-end.
-The primary deliverable is [Multi_agent_system_final_implemented.ipynb](Multi_agent_system_final.ipynb). It contains the implementation, a live research run, a routing evaluation, and sections for documenting results.
+The primary deliverable is [Multi_agent_system_final.ipynb](Multi_agent_system_final.ipynb). It contains the implementation, a live research run, a routing evaluation, and sections for documenting results.
 
 ## How it works
 
