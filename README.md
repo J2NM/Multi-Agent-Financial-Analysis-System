@@ -13,7 +13,8 @@ The primary deliverable is [`FinalProject_AAI_520.ipynb`](FinalProject_AAI_520.i
 Python, Google Colab, yfinance, NewsAPI, and the OpenAI API. Most model calls use gpt-4o-mini; model-based evaluation uses gpt-4o.
 
 ## Architecture
-```flowchart TD
+```mermaid
+flowchart TD
     T["Stock ticker"] --> P["Research planner"]
     M[("Saved lessons")] --> P
     P --> D["Gather stock data and news"]
