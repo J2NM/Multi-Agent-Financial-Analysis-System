@@ -13,7 +13,7 @@ The primary deliverable is [`FinalProject_AAI_520.ipynb`](FinalProject_AAI_520.i
 Python, Google Colab, yfinance, NewsAPI, and the OpenAI API. Most model calls use gpt-4o-mini; model-based evaluation uses gpt-4o.
 
 ## Architecture
-flowchart TD
+```flowchart TD
     T["Stock ticker"] --> P["Research planner"]
     M[("Saved lessons")] --> P
     P --> D["Gather stock data and news"]
@@ -43,7 +43,7 @@ flowchart TD
     O --> E
     E --> L["Save first-draft lessons"]
     L --> M
-
+```
 ## Recorded Results
 The saved AAPL example improved from 50 to 96/100 after revision. Across MSFT, JNJ, and NVDA, the average first-draft checklist score increased from 62 without memory to 84 with memory, using shared gathered inputs for each ticker's comparison.
 These internal checklist scores come from one run per ticker per condition. They do not establish factual accuracy or investment performance; some final reports still exceeded the word limit. Full methodology, findings, and limitations are covered in the accompanying project report.
